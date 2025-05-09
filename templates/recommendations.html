@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recommandations de Stages</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1d3557;
+    }
+    .score {
+      font-weight: bold;
+      color: #457b9d;
+    }
+    .badge-custom {
+      background-color: #a8dadc;
+      color: #1d3557;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1><i class="fas fa-briefcase"></i> Offres recommandées pour <span class="text-primary">{{ student_name }}</span></h1>
+    <p class="text-muted">Voici les stages correspondant à votre profil</p>
+  </div>
+
+  {% if offres %}
+    <div class="row">
+      {% for offre in offres %}
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary"><i class="fas fa-building"></i> {{ offre.titre }}</h5>
+              <span class="badge badge-custom mb-2"><i class="fas fa-tools"></i> {{ offre.competence }}</span>
+              <p class="card-text">{{ offre.description }}</p>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 text-end">
+              <span class="score"><i class="fas fa-star"></i> {{ offre.score }}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-warning text-center">
+      <i class="fas fa-exclamation-circle"></i> Aucune recommandation trouvée pour cet étudiant.
+    </div>
+  {% endif %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
