@@ -25,7 +25,7 @@ Ce projet est une application web développée avec **Flask**, **MySQL**, et **s
 ├── config.py           # Informations de configuration (DB)
 ├── templates/          # Pages HTML (home.html, recommendations.html)
 └── requirements.txt    # Dépendances Python
-
+.
 
 
 ---
