@@ -17,11 +17,15 @@ Ce projet est une application web développée avec **Flask**, **MySQL**, et **s
 
 ## ⚙️ Structure du projet
 
-├── app.py # Application Flask
-├── database.py # Connexion à la base de données
-├── reco.py # Algorithme de recommandation
-├── templates/ # Pages HTML (home.html, recommendations.html)
-├── config.py # Informations de configuration (DB)
+```bash
+.
+├── app.py              # Application Flask
+├── database.py         # Connexion à la base de données
+├── reco.py             # Algorithme de recommandation
+├── config.py           # Informations de configuration (DB)
+├── templates/          # Pages HTML (home.html, recommendations.html)
+└── requirements.txt    # Dépendances Python
+
 
 
 ---
