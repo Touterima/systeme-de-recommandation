@@ -15,21 +15,6 @@ Ce projet est une application web développée avec **Flask**, **MySQL**, et **s
 
 ---
 
-## ⚙️ Structure du projet
-
-```bash
-.
-├── app.py              # Application Flask
-├── database.py         # Connexion à la base de données
-├── reco.py             # Algorithme de recommandation
-├── config.py           # Informations de configuration (DB)
-├── templates/          # Pages HTML (home.html, recommendations.html)
-└── requirements.txt    # Dépendances Python
-.
-
-
----
-
 ## 🧠 Fonctionnement
 
 1. Les données des étudiants et des offres sont extraites de la base de données MySQL.
@@ -96,6 +81,17 @@ Ce projet est une application web développée avec **Flask**, **MySQL**, et **s
   Accueil : http://localhost:5000
   Recommandations : /api/recommendations/<nom_etudiant>
 
+---
 
+## ⚙️ Structure du projet
+
+```bash
+.
+├── app.py              # Application Flask
+├── database.py         # Connexion à la base de données
+├── reco.py             # Algorithme de recommandation
+├── config.py           # Informations de configuration (DB)
+├── templates/          # Pages HTML (home.html, recommendations.html)
+└── requirements.txt    # Dépendances Python
 
   
