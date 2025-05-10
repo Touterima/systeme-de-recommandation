@@ -1,4 +1,4 @@
-# 🎓 Recommandation de Stages
+# 🎓 Recommandation des offres de Stages
 
 Ce projet est une application web développée avec **Flask**, **MySQL**, et **scikit-learn**. Elle permet de recommander automatiquement des offres de stage aux étudiants en fonction de leurs compétences.
 
